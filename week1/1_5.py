@@ -4,11 +4,10 @@ def parlindome(s):
     else:
         return False
     
-maxV = 0
-
-for i in range(0,999):
-    for j in range(0,999):
+max_Values = 0
+for i in range(0,1000):
+    for j in range(0,1000):
         if parlindome(str(i*j)):
-            if (i*j) > maxV:
-                maxV = i*j
-print(maxV)
+            if (i*j) > max_Values:
+                max_Values = i*j
+print(max_Values)

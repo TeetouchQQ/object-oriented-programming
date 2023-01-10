@@ -1,22 +1,22 @@
 import math
-startH,startM,endH,endM = input().split()
-startH,startM,endH,endM = int(startH),int(startM),int(endH),int(endM)
-diffH = abs(startH - endH)
-diffM = abs(startM - endM)
-alldiff = (diffH * 60) + diffM
-#print(math.ceil(alldiff/60))
-print(alldiff)
+start_Hours,start_Minutes,end_Hours,end_Minutes = input().split()
+start_Hours,start_Minutes,end_Hours,end_Minutes = int(start_Hours),int(start_Minutes),int(end_Hours),int(end_Minutes)
+diff_Hours = abs(start_Hours - end_Hours)
+diff_Minutes = abs(start_Minutes - end_Minutes)
+all_difference = (diff_Hours * 60) + diff_Minutes
+#print(math.ceil(all_difference/60))
+print(all_difference)
 result = 0
 
-if alldiff > 15 and alldiff < 180:
-    result = (math.ceil(alldiff/60)*10)
-elif alldiff >= 180 and alldiff < 360:
-    result += (math.ceil(abs(180-alldiff)/60)*20)
+if all_difference > 15 and all_difference < 180:
+    result = (math.ceil(all_difference/60)*10)
+elif all_difference >= 180 and all_difference < 360:
+    result += (math.ceil(abs(180-all_difference)/60)*20)
     result += (math.ceil(abs(180)/60)*10)
     print(result)
-elif alldiff >= 180 and alldiff < 360:
-    result += (math.ceil(abs(180-alldiff)/60)*20)
+elif all_difference >= 180 and all_difference < 360:
+    result += (math.ceil(abs(180-all_difference)/60)*20)
     result += (math.ceil(abs(180)/60)*10)
-elif alldiff >= 360:
+elif all_difference >= 360:
     result = 200
 print(result)
