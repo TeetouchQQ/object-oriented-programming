@@ -1,12 +1,10 @@
 Sinput = input()
-L_cnt = 0
-U_cnt = 0
-for i in Sinput:
-    if i.isupper():
-        U_cnt += 1
-    elif i.islower():
-        L_cnt += 1
-        
-print(U_cnt)
-print(L_cnt)
-    
+Lower_cnt = 0
+Upper_cnt = 0
+for letter in Sinput:
+    if letter.isupper():
+        Upper_cnt += 1
+    elif letter.islower():
+        Lower_cnt += 1
+print(Lower_cnt)    
+print(Upper_cnt)
